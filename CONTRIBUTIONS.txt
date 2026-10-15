@@ -1,0 +1,685 @@
+================================================================================
+PUBLIC TALKS (Montreal)
+================================================================================
+
+## Effect.ts: typed errors, structured concurrency, and the runtime
+Venue: Montreal TypeScript / JS meetup; also given at Odeskconf
+Date: 2026-05-20
+Materials: /Users/firfi/work/typescript/effect-presentation
+           github.com/dearlordylord/effect-presentation-odeskconf
+Topics covered (per slide deck): typed errors, dependency injection, clocks,
+resource control, fibers, interrupts, scheduling/retry, queues/pub-sub,
+telemetry, standard library, composability, observability.
+
+## Exhaustive Matching in TypeScript with ts-pattern
+Venue: Montreal TypeScript / JS meetup
+Date: TODO (add when confirmed; repo activity points at Oct-Dec 2024)
+Materials: /Users/firfi/work/typescript/branching/techtalk
+           Keynote deck: branching.key
+Topics: algebraic data types in TS, exhaustive matching via discriminated
+unions, ts-pattern library walkthrough, parse-don't-validate, errors as
+values. Draft outline:
+https://docs.google.com/document/d/10xBMF3k1iZX_5lQwq4uc1rhku8f0uDRHefY1d-MtDsc/edit
+
+## Property-Based Testing with fast-check
+Venue: Montreal TypeScript / JS meetup
+Date: TODO (add when confirmed; repos dated 2024-02-25 and 2026-06)
+Materials: /Users/firfi/work/typescript/property-tests-tech-talk
+           /Users/firfi/work/typescript/property-tests-tech-talk-2
+           Keynote deck: property-based-testing.key
+Companion article: Property-Based Testing for Temporal Graph Storage.
+Also delivered as an internal Monadical tech talk.
+
+================================================================================
+OTHER TALKS
+================================================================================
+
+## Immutability and Side Effects
+Given twice: internally at Monadical, and at Odeskconf on 2024-02-13.
+Materials: /Users/firfi/work/immutability-tech-talk
+           Keynote deck: immutability-presentation.key
+           Recording: ~/Movies/immutability-talk-odeskconf-2024-02-13.mkv
+
+## Quint
+Date: 2026-05-07
+Materials: /Users/firfi/work/formal-proofs/quint-presentation (TALK_PLAN.md)
+           github.com/dearlordylord/quint-tech-talk
+
+## System Architecture and DDD
+Internal Monadical tech talk. Keynote deck: system-architecture-presentation.key
+
+Note on venues: Odeskconf is a conference internal to a Discord community, not
+a public industry conference. Do not name it as a venue on a CV; it carries no
+outside recognition. The Montreal TypeScript / JS meetup is the public venue.
+Other Keynote decks in iCloud (com~apple~Keynote/Documents, marked "don't make
+public"): types-presentation, comms, ECS-bevy-birdseye (EN and RU),
+currents-presentation x3, "Reptilian brain-oriented programming".
+
+================================================================================
+PUBLICATIONS
+================================================================================
+
+## Model-Based Testing of UI Logic via Quint + XState
+URL: https://www.loskutoff.com/blog/model-based-testing-dnd/
+Published: 2026
+Length: ~3,300 words
+
+Formal specification of D&D 5e combat state machine in Quint (a TLA+-inspired
+formal modeling language); model drives XState-based UI logic testing through
+exhaustive state space exploration rather than manual test cases.
+Keywords: model-based testing, formal methods, Quint, XState, state machines, UI logic
+Reception: Reached Hacker News front page — 109 points, 76 comments
+HN: https://news.ycombinator.com/item?id=47674894
+
+## Formally Specifying Dungeons & Dragons Rulebooks
+URL: https://www.loskutoff.com/blog/dnd-quint/
+Published: 2026
+Length: ~680 words
+
+Companion piece to the model-based testing article. Argues that game
+rulebooks are specifications and demonstrates lifting D&D 5e rules into
+Quint as the source of truth for the runtime engine (battle, character
+creation, character sheet) at /Users/firfi/work/typescript/dnd.
+Keywords: formal methods, Quint, TLA+, rules-as-code, specifications
+
+================================================================================
+REPOSITORIES
+================================================================================
+
+dnd - 2026-05-27 (active; ~/work/typescript/dnd, not yet public)
+huly-mcp - 2026-05-27 (public: github.com/dearlordylord/huly-mcp; npm: @firfi/huly-mcp v0.18.0; 30 stars; 3,467 downloads / last 30 days)
+reflector - 2025-11-22 17:29:20 -0500
+transcription-eval - 2025-11-21 10:28:47 -0500
+torsang-web - 2025-10-23 18:17:59 -0400
+llmeval - 2025-10-23 18:07:43 -0400
+effect-presentation - 2025-10-16 00:25:56 -0400
+headless-chat - 2025-09-22 16:32:23 -0400
+react-uuid-hook - 2025-09-12 19:54:06 -0400
+reflector-old - 2025-08-25 17:40:27 -0400
+morpheus-minecraft-internal - 2025-08-13 11:49:43 -0400
+tef-ecrit-bot - 2025-07-26 13:35:03 -0400
+node-redis - 2025-07-26 12:56:36 -0400
+auto-engineer - 2025-07-25 17:57:07 -0400
+ptsq-calculator - 2025-07-23 23:25:53 -0400
+taiga-task-master - 2025-07-22 10:37:53 -0400
+swearer - 2025-07-21 19:43:44 -0400
+private-company-database - 2025-07-10 19:24:48 -0400
+monadical.com - 2025-06-16 11:05:14 -0400
+vibe-sentiments - 2025-06-15 20:42:27 -0400
+axios-async - 2025-06-14 19:37:17 -0400
+project-automatic-management - 2025-06-11 09:58:47 -0400
+vibe-project - 2025-06-04 15:21:26 -0400
+ohdearlordylord - 2025-06-02 21:48:56 -0400
+onlyvibes - 2025-06-01 14:23:03 -0400
+cubbi - 2025-05-28 10:04:45 -0400
+taskmaster-test - 2025-05-27 18:48:22 -0400
+catgame - 2025-05-26 17:52:56 -0400
+etymo-mnemonical-vocabulary-nebulary - 2025-05-23 18:56:17 -0400
+docs - 2025-05-23 13:15:26 -0400
+crawler2 - 2025-05-22 15:46:20 -0400
+aiapi - 2025-05-20 16:09:39 -0400
+artifact-evaluator - 2025-05-12 19:32:29 -0400
+terraform - 2025-05-12 15:43:47 -0400
+crawler2-backup - 2025-05-09 17:32:07 -0400
+effect - 2025-04-13 19:06:30 -0400
+pathfinder-puzzle-1-armor-solver - 2025-04-12 11:53:07 -0400
+proxywalker - 2025-04-10 11:06:32 -0400
+geoip-proxy-standalone - 2025-04-03 13:20:10 -0400
+clickhouse-schema - 2025-04-01 17:16:27 -0400
+LibreChat - 2025-03-31 23:34:24 -0400
+scope3ai-py - 2025-03-27 10:42:43 -0400
+schizopr - 2025-03-23 10:20:27 -0400
+openapi-mcp-3 - 2025-03-12 16:03:54 -0400
+openapi-mcp-2 - 2025-03-11 14:24:44 -0400
+msp-openai - 2025-03-08 23:59:29 -0500
+teable-mcp-ssr - 2025-03-07 18:10:32 -0500
+llm-agent-guidelines - 2025-02-27 20:27:01 -0500
+scope3-py-tackler - 2025-02-05 14:52:03 -0500
+merman - 2025-01-22 16:13:51 -0500
+ai-menu - 2025-01-15 13:21:30 -0500
+nx - 2025-01-10 14:00:10 -0500
+currents - 2025-01-03 15:53:33 -0500
+helix - 2024-12-31 17:01:54 -0500
+branching - 2024-12-30 19:28:49 -0500
+cat-game - 2024-11-21 18:05:24 -0500
+curator-web-toVite - 2024-11-20 14:28:26 -0500
+infrastructure - 2024-10-28 17:56:47 -0400
+diagram-jetscale - 2024-10-03 14:14:55 -0400
+parsers-jamboree - 2024-09-24 12:06:49 -0400
+cloudflare-workers - 2024-09-19 10:37:09 -0400
+kuvio-astro - 2024-09-18 22:33:35 -0400
+fiddlequest - 2024-09-16 10:33:19 -0400
+wallet-adapter - 2024-08-26 13:59:08 -0400
+jikan - 2024-08-19 23:17:20 -0400
+ws - 2024-08-07 23:37:15 -0400
+typebox-lazy-transformation-bug-report - 2024-07-22 18:47:32 -0400
+zod-recursive-problem - 2024-07-08 16:31:46 -0400
+typia-vite - 2024-07-01 14:12:10 -0400
+typia-nx - 2024-06-29 20:19:53 -0400
+graphgen - 2024-05-20 15:39:14 -0400
+mixed-spaces - 2024-05-15 08:54:17 -0400
+parkwalk-aes-handshake - 2024-05-13 18:04:37 -0400
+immutablejs-fp-ts-empty-array-map-bug - 2024-05-07 14:07:53 -0400
+pokerddd - 2024-05-07 11:48:24 -0400
+loskutoff.com - 2024-05-01 13:31:17 -0400
+out - 2024-04-28 13:16:33 -0400
+resume - 2024-04-28 13:16:33 -0400
+token-graph-solana-a - 2024-04-16 15:06:38 -0400
+curator-firebase-cloud-functions - 2024-03-13 15:18:17 -0400
+io-ts-geo-repro - 2024-03-07 19:19:40 -0500
+trpc-todo - 2024-03-03 13:20:43 -0500
+property-tests-tech-talk - 2024-02-25 11:37:30 -0500
+fiddlequest-clean-check - 2024-02-19 16:23:02 -0500
+dod-fp-kata - 2024-02-06 14:35:32 -0500
+currents-glados - 2024-01-26 14:59:55 +0700
+react-uuid-hook - 2024-01-07 12:12:01 +0700
+state-machine-ts - 2023-12-26 20:26:02 +0700
+prisma-docs-fork - 2023-12-15 22:50:39 +0700
+xstate-union-matching - 2023-12-09 14:44:53 +0700
+graph-article - 2023-12-04 21:58:16 +0700
+bevy_sample - 2023-11-25 11:23:41 +0700
+curator-server - 2023-11-08 12:07:51 +0700
+curator-dashboards - 2023-11-06 20:55:36 +0700
+blag - 2023-11-02 20:37:07 +0700
+nxblog - 2023-11-02 18:14:18 +0700
+functional-pipelines-demo - 2023-10-23 19:30:08 +0700
+jsx-intermediate - 2023-09-25 11:23:18 +0700
+monorepo-jsx-intermediate-issue - 2023-09-21 18:35:18 +0700
+curator-share-server - 2023-09-06 14:23:54 +0700
+token - 2023-08-23 12:39:27 +0700
+monorepo - 2023-08-22 12:39:49 +0700
+chatroom_exe_fun - 2023-08-08 15:28:06 +0700
+hsl - 2023-08-05 09:28:22 +0700
+chatroom-prototype - 2023-07-29 12:02:19 +0700
+rust-websocket - 2023-07-27 22:39:36 +0700
+monodon - 2023-07-13 19:24:40 +0700
+tg-user-of-the-day - 2023-07-09 14:51:34 +0700
+touchies - 2023-07-08 18:14:36 +0700
+roomscape - 2023-06-27 22:33:57 +0700
+topLevelAwait-success - 2023-06-25 13:42:13 +0700
+topLevelAwait-failure - 2023-06-25 13:42:13 +0700
+nxblog-reproduction - 2023-06-25 13:42:13 +0700
+nxtensions - 2023-06-18 21:14:08 +0700
+temp-dashboard - 2023-06-15 19:25:44 +0700
+curator_event_queue - 2023-06-13 17:22:13 +0700
+bevy-ball-game - 2023-06-08 21:24:44 +0700
+repository-pattern-disambiguation - 2023-06-04 13:47:27 +0700
+curator-payments-server-old - 2023-06-01 17:33:16 +0700
+currents-3d-graph - 2023-06-01 17:14:02 +0700
+system-design-course - 2023-05-28 14:51:38 +0700
+fp-ts-demo - 2023-05-12 07:59:02 +0700
+mermaid-state-machine-ts - 2023-05-11 12:10:52 +0700
+thi-ng - 2023-05-07 14:29:14 +0700
+shades - 2023-05-06 14:43:44 +0700
+vittest-dependency - 2023-05-02 22:57:37 +0700
+vittest-base - 2023-05-02 22:55:59 +0700
+firestore-vitest-mock - 2023-05-02 20:06:11 +0700
+graph-generator - 2023-05-02 15:30:04 +0700
+mixed-spaces-mvp - 2023-03-29 11:07:57 +0700
+bandcamp-onboarding - 2023-02-26 09:10:24 +0700
+learning-fp-ts-repo - 2023-02-25 10:24:53 +0700
+ramp-research - 2023-02-22 15:27:46 +0700
+server-sandbox - 2023-02-20 14:56:39 +0700
+curator-payments-server-alfa - 2023-02-03 18:15:04 +0700
+zod-express-middleware - 2023-02-03 16:12:44 +0700
+side-stacker - 2023-02-01 13:27:02 +0700
+resolvers - 2023-01-28 16:00:53 +0700
+meteor - 2023-01-21 10:54:59 +0700
+terraform - 2023-01-18 22:16:42 +0700
+test-cra - 2023-01-02 16:33:22 +0700
+dolhins - 2023-01-02 11:16:33 +0700
+fq-game-ink-phaser - 2022-12-01 15:00:03 +0000
+node-csv - 2022-11-22 18:10:12 +0700
+static-typing-digest - 2022-10-06 21:27:18 +0700
+zod-schema-preprocess-bug - 2022-10-04 16:22:07 +0700
+slack-baka - 2022-10-01 18:54:24 +0700
+prescreen-kata-hs - 2022-09-01 02:01:29 +0700
+idempotency-key-js - 2022-08-29 14:00:07 +0700
+currents-test-public-package - 2022-08-23 01:10:26 +0700
+currents-solana - 2022-06-07 14:47:20 +0700
+stacker-scaffold-node - 2022-05-24 19:58:54 +0700
+side-stacker-scaffold-node - 2022-05-24 19:58:54 +0700
+side_stacker_scaffold - 2022-05-24 19:43:50 +0700
+nextjsdouble - 2022-05-23 13:47:28 +0700
+swhs - 2022-04-21 21:41:19 +0700
+roomscape-frontend - 2022-04-15 20:27:11 +0700
+youtube-dl-exec - 2022-04-14 16:44:19 +0700
+rust-graphql-orderbook - 2022-04-02 22:11:03 +0700
+fiddlequest-stripe-validator - 2021-10-30 02:11:28 +0700
+env-bug - 2021-01-15 12:28:42 +0700
+rocketchat - 2020-12-14 18:49:58 +0700
+search-source - 2020-10-01 11:04:52 +0700
+meteor-scss - 2020-08-29 21:03:51 +0700
+backend - 2017-09-15 16:30:52 +0300
+MyMalls - 2017-07-24 22:32:15 +0300
+apple-certs - 2016-10-17 19:42:25 +0700
+suzukiparser - 2016-06-27 08:35:37 +0300
+flow-router - 2016-04-28 18:48:24 +0300
+
+================================================================================
+DETAILED ANALYSIS OF KEY PROJECTS
+================================================================================
+
+## HULY-MCP - Stable LLM contract over a moving backend (Public OSS)
+
+**Headline / traction (2026-05-27):**
+- 3,467 npm downloads / last 30 days, 30 GitHub stars, listed on the
+  official MCP server registry (`io.github.dearlordylord/huly-mcp`).
+- 18 minor releases in ~3 months (v0.0 → v0.18, Feb→May 2026) via
+  Changesets-driven release pipeline. Solo author.
+- Used in production by external developers' agent setups (Claude Code,
+  Codex, Cursor, VS Code MCP, Claude Desktop).
+
+**The engineering problem:**
+Give AI coding agents a stable, strongly-typed interface to Huly (a
+self-hostable Linear/Jira alternative) which itself does not ship a
+public, stable REST surface. The upstream client is internal and
+changes; LLM tool schemas need to stay shape-stable or every existing
+agent breaks.
+
+**Resume-relevant signal:**
+- API design under uncertainty — wrapping a moving-target internal client
+  into a stable, typed, LLM-facing contract.
+- Per-tool structured schemas so model output stays parseable; ESLint,
+  circular-dependency checking (madge), integration tests.
+- Release engineering at velocity — Changesets, CI, repeatable npm
+  publishing, multi-worktree exploration of breaking changes before they
+  ship.
+- Real-world adoption ≠ toy project: thousands of monthly downloads from
+  unknown users.
+
+**Stack:** TypeScript, Node, MCP SDK (stdio transport), Changesets, npm.
+
+**Open interview questions (be ready):**
+- Contract-drift detection strategy when Huly renames or removes fields.
+- Versioning policy for MCP tool schemas — what does a breaking change
+  look like, and how do agents discover capability?
+- Telemetry on tool-call usage / failure modes.
+- Auth/credential handling for end-user agents.
+
+**Useful one-liner for resumes:**
+"Authored an MCP server (Huly platform) with thousands of monthly
+downloads and 30 GitHub stars; ships under a versioned, Changesets-driven
+release pipeline; designed the stable LLM-facing schema layer over a
+moving internal API."
+
+Repo: https://github.com/dearlordylord/huly-mcp
+npm:  https://www.npmjs.com/package/@firfi/huly-mcp
+Local: /Users/firfi/work/typescript/hulymcp
+
+---
+
+## DND - Rules-as-code pipeline (Quint spec → TypeScript runtime → MCP)
+
+**Headline / public validation:**
+- "Model-Based Testing for Dungeons & Dragons" reached the Hacker News
+  front page (109 points, 76 comments).
+- Companion piece: "Formally Specifying Dungeons & Dragons Rulebooks."
+- Substrate is a tabletop rulebook; the technique generalizes directly
+  to any rules-heavy domain — pricing, permissions, claims, workflow
+  engines, regulatory state machines.
+
+**The engineering problem:**
+Treat a written rulebook as a specification. Lift the rules into Quint
+(TLA+-derived formal modeling language), model-check with Apalache,
+then enforce that the production TypeScript runtime refines the spec by
+replaying Quint-generated traces against it (`quint-connect`).
+Surface the runtime through both an MCP server (for AI agents) and a
+React app (for humans).
+
+**Resume-relevant signal:**
+- Formal methods in real production TypeScript — not academic toy code.
+  Spec / runtime conformance is enforced mechanically, not by review.
+- Large TypeScript monorepo (~7 packages, pnpm + Turbo) with strict
+  package-boundary discipline and custom CI coverage tooling (rules-
+  kernel coverage, dispatch-boundary checks, unit-profile coverage).
+- XState UI logic driven by the same spec the backend tests against —
+  one source of truth across UI, backend, and MCP surface.
+- MCP server exposing the runtime to LLM agents — same toolchain as the
+  Huly MCP work but applied to a fully owned domain model.
+- Public technical writing strong enough to hit HN front page.
+
+**Stack:** TypeScript, Quint (+ Apalache), XState, MCP SDK, React, pnpm
+workspaces, Turbo.
+
+**Open interview questions (be ready):**
+- Concrete invariants the Quint spec proves; bounded-model parameters.
+- Specific bug Apalache caught that a hand-written test would have missed.
+- How `quint-connect` enforces refinement — trace replay, random testing
+  against the spec, or both.
+- How the character-sheet projection is kept in sync with the battle
+  runtime's view of the same entity.
+- Monorepo build performance (Turbo cache, CI time).
+
+**Useful one-liner for resumes:**
+"Built an end-to-end rules-as-code pipeline: Quint specifications,
+Apalache model-checking, and `quint-connect`-driven trace replay against
+a TypeScript runtime (~7-package pnpm/Turbo monorepo) with an MCP
+surface for LLM agents and an XState-driven React app. The article on
+the approach reached the Hacker News front page."
+
+Local: /Users/firfi/work/typescript/dnd
+Status: Active development; not yet public.
+License plan: Apache 2.0 code, CC-BY-4.0 for SRD content.
+
+---
+
+## REFLECTOR (Python) - AI Transcription Platform
+Location: /Users/firfi/work/clients/monadical/reflector
+Last modified: 2025-11-22
+
+**What it is:**
+- AI-powered audio transcription and meeting analysis platform
+- Real-time transcription (Whisper/Parakeet), speaker diarization (Pyannote 3.1)
+- Live translation (Facebook Seamless-M4T), topic detection & summarization
+- 100% local processing (no vendor lock-in)
+
+**Technical achievements:**
+
+1. **Hatchet DAG Workflows** - Durable execution system:
+   - DailyMultitrackPipeline (1,341 lines) - main workflow orchestrating entire pipeline
+   - Automatic retry (up to 3 times per task)
+   - Parent-child task dependencies for DAG edges
+   - Dynamic parallelization: N tracks → N workflows, C topic chunks → C workflows
+   - Execution timeouts with dynamic adjustment (60s-600s, mixdown scales with track count)
+
+2. **Daily.co Integration** - Multitrack audio synchronization:
+   - Each participant = separate audio track (WebM)
+   - PyAV metadata extraction (stream.start_time) for timestamp sync
+   - Silence padding via adelay filter
+   - Audio mixdown: amix + aresample filters
+   - Handles skipped frames from Daily.co muting
+
+3. **Process Fork Awareness**:
+   - Hatchet forks worker processes; shared connections cause pool exhaustion
+   - Fresh DB/storage connections per task via context managers
+   - Deferred imports inside task functions
+
+4. **Documentation**:
+   - /server/docs/daily_pipeline.md (422 lines) - complete sequence diagrams
+   - PLAN.md - Hatchet Whereby support implementation
+   - Extensive inline documentation explaining audio padding timing
+
+**Tech stack:**
+- FastAPI, Celery (legacy → Hatchet migration), PyAV, SQLAlchemy, Pydantic
+- WebSocket broadcasts for real-time progress updates
+
+**Resume angle:**
+Python backend, DAG workflows, audio processing, multitrack synchronization, durable execution
+
+---
+
+## TRANSCRIPTION-EVAL - ML Model Evaluation Framework
+Location: /Users/firfi/work/clients/monadical/transcription-eval
+Last modified: 2025-11-21
+
+**What it is:**
+- Automated evaluation framework for transcription/diarization quality
+- Compares Daily.co raw-tracks (multitrack) vs Whereby mixed audio (single-track)
+- Processes thousands of test cases in parallel
+
+**Technical achievements:**
+
+1. **WER/DER Metrics**:
+   - Word Error Rate (WER) - industry-standard accuracy measurement
+   - Diarization Error Rate (DER) - speaker identification accuracy
+   - Automated calculation without manual review
+
+2. **Multitrack Comparison**:
+   - Single-track: `python -m reflector.tools.process <audio.mp4>`
+   - Multitrack: `python -m reflector.tools.process <track1>,<track2>,<track3> --multitrack`
+   - Same output format (JSONL) for both modes
+
+3. **Cache Strategy**:
+   - Meeting ID identifies evaluation input
+   - Hash(meetingId:cliArgs) for cache keys
+   - Cursor-based reconciliation for gap detection
+
+**Business value:**
+- Cost optimization (compare providers)
+- Quality assurance benchmarking
+- ROI: 100x faster than manual review
+
+**Resume angle:**
+ML evaluation metrics, automated testing at scale, multitrack processing
+
+---
+
+## HEADLESS-CHAT - Discord-Grade Real-Time Chat Library
+Location: /Users/firfi/work/typescript/headless-chat
+Last modified: 2025-09-22
+
+**What it is:**
+- TypeScript-first, framework-agnostic real-time chat library
+- Positioned as Discord/Slack-grade alternative to @yext/chat-headless
+- Turborepo monorepo: @headless-chat/types, /core, /react
+
+**Technical achievements:**
+
+1. **Cursor-Based Message Reconciliation**:
+   - Dirty/clean message separation model
+   - clearMessages: guaranteed-ordered messages from server
+   - dirtyMessages: locally queued/unconfirmed during sync
+   - Cursor system enables partial range queries (no full resync)
+
+2. **Composite Message IDs** - Distributed ordering:
+   - Format: {timestamp}-{counter}
+   - Guarantees ordering even with out-of-order delivery
+   - Prevents collisions in distributed systems
+   - Enables conflict resolution without coordination
+
+3. **Multi-Room Architecture**:
+   - rooms: ImmutableMap<ChatRoomId, RoomState>
+   - Not limited to single conversation (unlike competitors)
+   - Scales to 1000s of concurrent rooms
+   - Presence tracking via users: ImmutableSet<UserId>
+
+4. **Gap Detection & Recovery**:
+   - Reconciliation algorithm (lines 101-184 in core.ts)
+   - Detects gaps between local and remote messages
+   - Only syncs missing range (not full resync)
+   - Handles islands of messages with gaps (warns, doesn't crash)
+
+5. **WebSocket-First Protocol**:
+   - 3-second heartbeat (ping/pong) for connection health
+   - Automatic reconnection with 3-second delay
+   - TCP + persistent connection (vs HTTP polling)
+
+**Architecture patterns:**
+
+1. **Functional Programming with Immutable.js**:
+   - Pure reducer pattern (no mutations)
+   - Deterministic state transitions
+   - Structural sharing prevents memory bloat
+   - Time-travel debugging/replay
+
+2. **Type-Safe Runtime Validation (io-ts)**:
+   - Codec-based validation at boundaries
+   - Type erasure checked at runtime
+   - Single source of truth for types
+
+3. **Pattern Matching (ts-pattern)**:
+   - Exhaustive handling of all action types
+   - More readable than switch/case
+
+**Tech stack:**
+- fp-ts, immutable, io-ts, ts-pattern, React, WebSocket
+
+**COMPARISON.md highlights:**
+- ✅ WebSocket-first (vs HTTP/SSE)
+- ✅ Multi-room support (vs single conversation)
+- ✅ Cursor-based synchronization
+- ✅ Composite message IDs for ordering
+- ✅ Gap recovery without full resync
+
+**Resume angle:**
+Distributed systems, cursor-based reconciliation, functional patterns, real-time protocols
+
+---
+
+## SCOPE3 AI (aiapi) - LLM Environment Impact Measurement
+Location: /Users/firfi/work/clients/monadical/aiapi
+Last modified: 2025-05-20
+
+**What it is:**
+- Environmental impact measurement platform for AI/ML workloads
+- Tracks carbon emissions (CO2e), energy (Wh), water (H2O) of LLM inference
+- Go backend + Python SDK (scope3ai-py)
+
+**Technical achievements:**
+
+1. **"Flow as Data" Pattern** - StaticGraphNode:
+   - Computation flow as explicit data structures (not just code)
+   - Each step = node with ID, description, links to other nodes
+   - Type-safe at compile-time, verifiable at runtime
+   - Example:
+     ```go
+     var InferPueStaticNode = NewStaticGraphNode(
+         "InferPue", "PUE Inference",
+         []StaticGraphEdge{
+             {Node: GetDatacenterPueStaticNode, Description: "Datacenter PUE highest precision"},
+             {Node: GetComputeRegionPueStaticNode, Description: "Regional approximation"},
+             {Node: GetCountryPueStaticNode, Description: "Country approximation"},
+             {Node: GetDefaultPueStaticNode, Description: "Default PUE"},
+         },
+     )
+     ```
+
+2. **Auto-Generated Mermaid Diagrams**:
+   - WHY: 25+ node inference cascade (PUE→GridMix fallback strategies)
+   - Complex decision tree needs visual documentation
+   - Solution: Code IS the diagram - auto-generate via `go generate`
+   - Tool: `//go:generate go run ../../tools/impact_params_docs_gen/main.go`
+   - Converts StaticGraphNode → Mermaid flowchart (bottom-up)
+   - Three graphs: pue_inference_graph.md, gridmix_inference_graph.md, impact_params_graph.md
+
+3. **Code-Documentation Sync Guarantee**:
+   - Problem: Manual diagrams become stale when logic changes
+   - Solution: Make graphs generated code
+   - Runtime assertion validates struct fields match graph edges
+   - Catches orphaned logic at runtime
+
+4. **Complex Parameter Hierarchy**:
+   - User location → Datacenter → Power grid → Model settings
+   - 4 fallback strategies: Datacenter → ComputeRegion → Country → Default
+   - Within each level: 3-5 sub-strategies
+   - Result: ~25-30 node dependency tree
+
+5. **Type-Safe SQL with go-jet**:
+   - 50+ tables across PostgreSQL + ClickHouse
+   - Code generation eliminates SQL injection risks
+
+**Tech stack:**
+- Go (Gin web framework), PostgreSQL, ClickHouse, go-jet, fp-go (Either/Option monads)
+- Python SDK (scope3ai-py) supports OpenAI, Anthropic, Cohere, LiteLLM, HuggingFace, MistralAI, Google GenAI
+
+**Resume angle:**
+Self-documenting code, flow-as-data, auto-generated diagrams, Go backend, type-safe SQL
+
+---
+
+## CURRENTS (Graphuier) - Payment Graph Visualization & Routing
+Location: /Users/firfi/work/clients/monadical/currents
+Last modified: 2025-01-03
+
+**What it is:**
+- Graph-based funds distribution system with real-time visualization
+- Graphuier: interactive graph visualization app for payment routing patterns
+- Multi-layered payment processing (Stripe/PayPal)
+
+**Technical achievements:**
+
+1. **Graphuier - Interactive Graph Visualization**:
+   - Location: /apps/graphuier
+   - ForceGraph2D (D3-force-based React component) for interactive rendering
+   - Multiple visualization modes:
+     * Tokens: Real-time token graph visualization
+     * Payin Trace Simulation: Step-by-step payment routing visualization
+   - Node colors: blue (start), green (filled), gray (faded), teal (split), red (dead-end)
+   - Links colored by routing events (jump/split operations)
+
+2. **Payment Routing Algorithm** (token-blog-content-graph-routing):
+   - "Snail Trace": Step-by-step trace of payment flow through network
+   - Events: start → fill → split → fade → jump → end
+   - Packet Allocation: Equal distribution of remainders across branches
+   - Greed Mechanism: Each node has "greed" value (capacity requirement)
+   - Full vs. Partial fills with remainder handling
+   - Depth-first routing through graph structure
+
+3. **Graph Concepts Visualized**:
+   - Beneficiary Graph: Multi-level channel relationships (artists, collectives, settlements)
+   - Constraints: Enforce graph flatness to prevent infinite loops
+   - Artist channels: exactly 1 outbound edge (SETTLEMENT)
+   - Collective channels: multiple outbound edges (BENEFICIARY relationships)
+   - Dynamic split allocation when node has multiple outgoing edges
+
+4. **Payment System Architecture**:
+   - Payin pipeline: Frontend → REST API → Stripe/PayPal → Firestore
+   - Books (Double-Entry Accounting): Per-user ledger (Assets = Liabilities)
+   - Routing system: Routes payin packets through beneficiary graph
+   - Stripe integration: Customer/payment method mirroring to Firebase
+   - Payout processing: Monthly batch job with CSV/JSON audit snapshots
+
+5. **Monorepo Scale**:
+   - 99+ libraries in Nx workspace
+   - Clear separation: -commons, -api, -backend, -client
+   - Libraries: token-routing-*, stripe-* (6), graph-* (5), firebase-* (5), books
+
+**Tech stack:**
+- Frontend: React, TypeScript, Vite, react-force-graph, react-query, Tailwind
+- Backend: Express.js, Prisma, PostgreSQL, Firebase Firestore, Neo4j (legacy)
+- FP: fp-ts, immutable.js, io-ts, effect/schema
+- Payment: Stripe/PayPal SDKs
+- Build: Nx monorepo, Yarn workspace
+- Infrastructure: TODO - specify Kubernetes, Terraform, Ansible work
+
+**Resume angle:**
+Graph algorithms, real-time visualization, payment routing, double-entry accounting, 99-library monorepo
+
+---
+
+## PROPERTY-BASED-TECH-TALK - Educational Demo
+Location: /Users/firfi/work/typescript/property-tests-tech-talk
+Last modified: 2024-02-25
+
+**What it is:**
+- Tech talk demonstrating property-based testing with TypeScript and fast-check
+- Nx monorepo workspace with array reversal as teaching example
+- Shows progression from example-based to property-based testing
+
+**Key concepts demonstrated:**
+- **Involution**: reverse(reverse(a)) = a
+- **Length Preservation**: reverse(a).length = a.length
+- **Reversing Property**: Custom reverse matches native implementation
+- **Element Position**: Correct mapping from index i to position from end
+
+**Technical approach:**
+- Uses fast-check library for generative testing
+- Shows test organization: naive → property-based → fancy abstractions
+- Demonstrates higher-order property validators
+- Property composition with reusable helpers
+
+**Context value:**
+- Shows understanding of formal verification approaches
+- Demonstrates ability to teach complex technical concepts
+- Related to Currents graph testing (property-based validation of payment routing invariants)
+- Not for resume inclusion - educational/presentation work
+
+---
+
+## FIDDLEQUEST (Frequency Quest) - Educational Game Platform
+Location: /Users/firfi/work/clients/darren/fiddlequest
+Last modified: 2024-09-16
+
+**What it is:**
+TODO - expand section
+
+**Technical achievements:**
+TODO - specify AWS integration:
+- AWS SQS + DynamoDB for badge/achievement propagation between video game and web app
+- Ansible for infrastructure automation
+- Game-to-web-app real-time sync architecture
+
+**Resume angle:**
+AWS services integration, event-driven architecture, game backend
+

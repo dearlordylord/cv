@@ -1,6 +1,6 @@
 % !TEX TS-program = lualatex
 
-\documentclass[a4paper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{libertine}
@@ -8,14 +8,14 @@
 \usepackage{longtable}
 \usepackage{colortbl}
 \arrayrulecolor{black!35}
-\usepackage[cm]{fullpage}
+\usepackage[margin=1.5cm,top=1.2cm,bottom=1.7cm,footskip=0.8cm]{geometry}
 \usepackage{amssymb}
 
 % headers and footers
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \pagestyle{fancy}
-\fancyfoot[L]{Igal Tabachnik}
+\fancyfoot[L]{Igor Loskutov}
 \fancyfoot[C]{Page \thepage\ of \pageref*{LastPage}}
 \fancyfoot[R]{\today}
 \renewcommand{\footrulewidth}{0.4pt}% default is 0pt
@@ -45,109 +45,76 @@
 % nicer-looking section titles
 \usepackage{titlesec}
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{1em}{3pt}
+\titlespacing{\section}{0pt}{0.8em}{3pt}
 
 \begin{document}
 
 % --------------------TITLE-------------
 \par{\centering
-		{\Huge \textsc{Igal Tabachnik}
-	}\bigskip\par}
+		{\Huge \textsc{Igor Loskutov}\par}
+		\smallskip{\large Senior Full Stack Engineer}\smallskip\par}
 
 \hrule
 \vspace{0.5em}
-\begin{tabular}{rl}
-  \textsc{Phone:}     & +972 54 4766343\\
-  \textsc{Email:}     & \href{mailto:hmemcpy@gmail.com}{hmemcpy@gmail.com}\\
-  \textsc{Links:}     & \faHome{} \href{https://hmemcpy.com}{hmemcpy.com}
-                      | $\mathbb{X}$ \href{https://x.com/hmemcpy}{@hmemcpy}
-                      | \faGithub{} \href{https://github.com/hmemcpy}{github}
-                      | \faLinkedin{} \href{https://www.linkedin.com/in/igaltabachnik/}{linkedin}
-                      | \faStackOverflow{} \href{https://stackoverflow.com/users/8205/igal-tabachnik}{stackoverflow}
-\end{tabular}
+{\centering Montr\'eal, Qu\'ebec
+  | \faEnvelope{} \href{mailto:igor@loskutoff.com}{igor@loskutoff.com}
+  | \faHome{} \href{https://loskutoff.com}{loskutoff.com}
+  | \faGithub{} \href{https://github.com/dearlordylord}{github}\par}
 
 \section{Summary}
 \begin{tabular}{p{0.9\textwidth}}
- I am a senior backend/platform engineer with 20+ years of experience building backend systems, infrastructure, and developer tools.\\\\
-
- I contribute to open source, speak at conferences, and occasionally organize meetups. Helping others become unstuck is an important part of my work - through mentorship, sharing knowledge, and working through problems together.\\\\
-
- My background is in statically typed languages, especially Scala and Rust, with an emphasis on functional programming. My current focus is AI-native engineering: helping teams adopt AI and evolve how they build, test, and maintain software.
+ Senior full stack engineer: React since 2015, TypeScript, Node.js and Effect. Built most of the money side of a music royalty platform, was founding engineer of a violin teaching platform from its first commit, and now designs tooling for coding agents.
 \end{tabular}
 
-\section{Work Experience \hfill{\normalfont\footnotesize\itshape (full details on LinkedIn)}}
-\begin{longtable}{r|p{0.72\textwidth}}
+\section{Work Experience}
+\begin{longtable}{r|p{0.78\textwidth}}
 
-  \textsc{Jan 2025--May 2026} & \job{Founding Engineer}{EurekaLabs}, Israel \\(1 year, 5 months)
-    &Led development of low-level core features in an Ethereum block builder written in Rust and maintained compatibility with Reth changes and Ethereum protocol updates.\\&\\
-    &Introduced agentic engineering practices to the team, with an emphasis on prompt engineering and skills for coding agents.
-    \sotagrow{rust,ethereum,ai-engineering,agentic-workflows}\sep
+  \textsc{2022 - 2026} & \job{Senior Full Stack Engineer}{Monadical} (remote)\\
+    {\small Quebec, CA} &\textbf{Payment Distribution Platform.} Lead contributor on a music royalty platform and principal author of its payments backend (Express, Neo4j, Prisma). Built a custom double-entry accounting ledger on PostgreSQL, graph-based revenue routing with event sourcing and CQRS, Stripe and PayPal integration, and wrote the RabbitMQ webhook ingestion pipeline end to end, with dead-letter and retry queues, per-source schema parsers and Stripe signature verification. Wrote the architecture decision records covering payment-event reliability and the accounting design.\\[0.4em]
+    &\textbf{Ownership and Collaboration.} Worked directly with the client's team for three years on requirements and API design inside a PRD then ADR decision process. Coordinated two junior developers and onboarded two successive senior developers as the team changed.\\[0.4em]
+    &\textbf{Internal Tools, Delivery and Infrastructure.} Built the internal applications the team worked from, end to end: an operations dashboard over payins, payouts, accounting and graph traversal, and a graph explorer that replays the production routing algorithm step by step over generated graphs. Principal author of the delivery pipeline: every pull request got its own preview environment and had to clear dependency, type and test gates before it could merge. Lead contributor on the infrastructure repository and sole author of its Kubernetes and Helm paths, including the Grafana and Loki logging stack.\\[0.4em]
+    &\textbf{Python Services and Durable Execution.} Integrated local model inference through Ollama with structured output on an open-source AI transcription platform, and drove significant parts of its Celery to Hatchet durable-execution migration: made workflow execution mandatory for multitrack processing, added DAG task models and live status broadcasting, and wrote a CLI that renders workflow runs as a text DAG. On a separate client engagement, owned the browser pool, proxy routing and backpressure subsystem of a Playwright crawler in asyncio.
+    \sotagrow{typescript,react,node.js,python,postgresql,neo4j,rabbitmq,kubernetes}\sep
 
-  \textsc{Apr 2020--Mar 2024} & \job{Founding Engineer and Tech Lead}{Unit}, Israel \\(4 years)
-    &First employee at Unit. Helped build the engineering team and core backend platform from the ground up.\\&\\
-    &Designed and implemented core backend infrastructure: data access, wire protocols, service architecture, distributed calls, domain models, and testing infrastructure.\\&\\
-    &Implemented payment-protocol services and APIs end-to-end, including ACH, wires, cards, and related banking workflows.\\&\\
-    &A large part of my role was helping engineers become effective in a purely functional Scala/ZIO codebase, from onboarding and one-on-one mentorship to debugging support, workshops, and engineering guidelines.
-    \sotagrow{scala,zio,postgres,payment-protocols,aws}\sep
+  \textsc{2021 - 2022} & \job{Senior Frontend Engineer}{DesignerAdvantage} (remote contract)\\
+    {\small Newton, MA, US} &\textbf{React Platform Stabilization.} Brought TypeScript and a strict typing discipline into a React codebase, and reworked the state management of a frontend-heavy single-page app built around forms and tables, with react-query for server state. Consumed Salesforce API data in the user interface. Set up end-to-end tests on pull requests and Sentry monitoring.
+    \sotagrow{react,typescript,react-query,sentry}\sep
 
-  \textsc{Jun 2016--Aug 2019} & \job{Senior Software Engineer}{Wix.com}, Israel \\(3 years, 3 months)
-    &Worked on the migration to \textit{Bazel} in the build infrastructure team: added Scala support, contributed fixes to the \textit{Bazel IntelliJ plugin} (developed by Google), and built internal tools for Wix-specific build and IDE workflows.\sotagrow{scala,bazel,intellij-sdk}
+  \textsc{2014 - 2024} & \job{Founding Engineer}{FiddleQuest} (remote contract, intermittent)\\
+    {\small Rogue River, OR, US} &\textbf{Music Education Platform, First Commit to Wind-Down.} Wrote the first commit and remained the principal contributor across a decade of production for a violin teaching platform (Meteor, React, TypeScript). Owned Stripe subscription billing with dunning, plus a serverless reconciliation job that checks Stripe against application state.\\[0.4em]
+    &\textbf{Media Pipeline, Auth and Event-Driven Services.} Built direct-to-S3 uploads and a video transcoding pipeline with watermarking and thumbnails, an OAuth2 authorization server shared by a separate game service and a forum, and event-driven gameplay services on AWS messaging. Ran the infrastructure (Ansible, nginx, MongoDB, Redis) and upgraded the Meteor, React and Bootstrap stacks on a live paying customer base.
+    \sotagrow{meteor,react,typescript,stripe,aws,mongodb}
 \end{longtable}
 
-\newpage
-\begingroup
-\titlespacing{\section}{0pt}{1.4em}{6pt}
-\section{Earlier Experience \hfill{\normalfont\footnotesize\itshape (full details on LinkedIn)}}
-\begin{longtable}{@{}p{0.20\textwidth}|p{0.29\textwidth}|p{0.43\textwidth}@{}}
-  \textsc{Jul 2015--May 2016} & \textbf{Software Developer}\newline Particular Software
-    &Built distributed .NET messaging infrastructure and developer-facing APIs for NServiceBus and the Particular Platform.
-    \par\vspace{8pt} \\
-  \textsc{Jul 2012--Jan 2015} & \textbf{Lead Developer}\newline OzCode (a CodeValue company)
-    &Led development of a Visual Studio extension for debugging productivity.
-    \par\vspace{8pt} \\
-  \textsc{Mar 2010--Nov 2011} & \textbf{Senior Software Developer}\newline Typemock
-    &Built unit-testing tools using the unmanaged CLR Profiling API, runtime inspection, and IL weaving.
-    \par\vspace{8pt} \\
-  \textsc{Oct 2008--Mar 2010} & \textbf{Software Developer}\newline Eternix
-    &Lead developer of a WebDAV file server with encryption, versioning, quotas, and user management.
-    \par\vspace{8pt} \\
-  \textsc{Oct 2007--Oct 2008} & \textbf{Software Developer}\newline InfoGin
-    &Built customer-specific mobile web applications in the professional services team.
-    \par\vspace{8pt} \\
-  \textsc{Jun 2005--Sep 2007} & \textbf{Software Developer}\newline PrizmaSoft
-    &Built business-process-management client applications and maintained build and deployment scripts.
-    \par\vspace{5pt}
+\section{Open Source \& Selected Projects}
+\begin{longtable}{@{}p{0.95\textwidth}@{}}
+  \faGithub{} \textbf{\href{https://github.com/dearlordylord/huly-mcp}{huly-mcp}} (TypeScript, Effect, 2026): MCP server and parity CLI giving AI agents a typed contract over the Huly platform. Advanced context-management techniques for the clients consuming it.\\[0.5em]
+  \faGithub{} \textbf{\href{https://github.com/dearlordylord/hapsland}{Hapsland}} (TypeScript, Bend, Effect, 2026): semantic real-time review layer for coding agents. A classifier reviews the agent's code-edit stream, and the feedback lands inside the same agent round. Sturdy resource and cleanup management, with per-agent partitions that hold up under swarms of agents and their subagents. Configurable data-governance and security policies baked in. Formal methods and a functional-programming approach for strict control over agentic output and for faithful visualisations and simulations of it. Bend2, TypeScript, Effect, FoldKit. Deterministic simulation testing, and the core logic turned into a game to teach it to maintainers and users.\\[0.5em]
+  \faGithub{} \textbf{\href{https://github.com/dearlordylord/slopchat}{slopchat}} (Emacs Lisp, OpenTUI, 2026): a coding agent, an implementation of \href{https://gist.github.com/VictorTaelin/91837951a5ce5b38f341ec1ba1df6449}{UniiChat}. Infinite context window.\\[0.5em]
+  \faGithub{} \textbf{\href{https://github.com/dearlordylord/5e-quint}{5e-quint}} (TypeScript, Quint, 2026): the Dungeons and Dragons reference rulebook, 364 pages of it, lifted into formal specifications in Quint. Guided through a model-based testing approach, a TypeScript reducer leads configurable DSL content through more than 900 rule units, and the behaviour that has to hold is in their combinations. Who spends a spell slot when your fireball is counterspelled, but the counterspell is counterspelled as well? Published as an MCP server.
 \end{longtable}
 
-\renewcommand{\arraystretch}{1.12}
+\renewcommand{\arraystretch}{1.0}
 \section{Technical Profile}
-\begin{tabular}{rl}
-  \textsc{Expertise:}& Backend engineering, distributed systems, microservices,\\
-  &concurrency, functional programming, developer tools\\
-  \textsc{Practices:}& SOLID, DDD, CQRS, TDD, property-based testing, E2E testing\\
-  \textsc{Languages:}& Scala, Rust, Haskell, C\#, Java, TypeScript, Python\\
-  \textsc{Libraries and runtimes:}& ZIO, Typelevel libraries, Tokio, JVM/CLR internals\\
-  \textsc{Infrastructure:}& Kubernetes, PostgreSQL, Kafka, ZeroMQ, AWS\\
-  \textsc{Tooling:}& Bazel, compiler/IDE plugins, SDKs, production debugging\\
-\end{tabular}
+\begin{longtable}{@{}r p{0.78\textwidth}@{}}
+  \textsc{Languages:}& TypeScript (expert), JavaScript, Python, Rust, Ruby, PHP (Zend Certified), Java (Oracle Certified), Scala, Elm, Bend2\\
+  \textsc{Front-End:}& React (10+ yrs), Next.js, Vite, Tailwind; client state across observable, single-store, atomic and statechart models (MobX, Redux Toolkit, jotai, XState); server state and data fetching with React Query and RTK Query; data visualization (canvas, force-directed graphs)\\
+  \textsc{Back-End \& Data:}& Node.js, Express, async Python (Celery and Hatchet workflows, asyncio), REST and typed OpenAPI clients; PostgreSQL and Prisma, Neo4j, MongoDB, Redis; RabbitMQ, event sourcing, CQRS, durable execution; Stripe and PayPal, double-entry ledgers\\
+  \textsc{Cloud \& Delivery:}& AWS (S3, SQS, SNS, Lambda/SAM), GCP and Firebase, Docker, Kubernetes and Helm; GitHub Actions pipelines with preview deploys and quality gates; Terraform against DigitalOcean and Cloudflare, Ansible; Sentry, Grafana and Loki\\
+  \textsc{Testing \& Correctness:}& property-based testing (fast-check), model-based testing against Quint specifications, Playwright and Cypress end-to-end runs, vitest and jest; typed functional TypeScript (Effect, fp-ts, io-ts) with branded and phantom types\\
+  \textsc{AI Engineering:}& MCP server authoring, published on the official MCP registry; tool-surface design for model consumption, per-client exposure policy, hierarchical context memory under a token budget, evaluation harnesses with deterministic replay and adversarial trace review, local model integration with structured output; Claude Code, Codex and opencode as daily workflow\\
+\end{longtable}
 
-\section{Open Source}
-\begin{tabular}{r p{0.75\textwidth}}
-  \textsc{Tools and Libraries:}& ZIO and Scala ecosystem:\\
-  &\faGithub{} \href{https://github.com/zio/zio-intellij}{zio-intellij}: IntelliJ IDEA plugin for the ZIO library ecosystem.\\
-  &\faGithub{} \href{https://github.com/hmemcpy/zio-clippy}{zio-clippy}: Scala compiler plugin that improves ZIO type-mismatch errors.\\[0.35em]
-  \textsc{Book:}& \faGithub{} \href{https://github.com/hmemcpy/milewski-ctfp-pdf}{Category Theory for Programmers} by Bartosz Milewski:\\
-  &\LaTeX{} source and build tools for PDF and print editions of the book.\\[0.35em]
-  \textsc{Contributions:}& Bug fixes and feature contributions to the IntelliJ Scala plugin, Typelevel libraries, Zed, Bazel and more.
-\end{tabular}
+\section{Education \& Certifications}
+\begin{longtable}{@{}r p{0.8\textwidth}@{}}
+  \textsc{2014 - 2018:}& \textbf{Bachelor in Applied Informatics (Business Informatics)}, Togliatti State University, Togliatti, Russia\\
+  \textsc{Certifications:}& \href{https://cert.tough-dev.school/eS8vL3fj6ZMuKuBvqcpKQS/en}{System Analysis} and \href{https://cert.tough-dev.school/UZcEoycLeUiAcBBUzmb9xs/en}{Asynchronous Architecture} (tough-dev.school); Oracle Certified Professional, Java SE; Zend Certified Engineer, PHP\\
+\end{longtable}
 
-\section{Selected Talks}
-\begin{tabular}{rl}
-  \textsc{Talks:}&\faYoutubePlay{} \href{https://www.youtube.com/watch?v=eILoMm9t4rI}{The Business of Scala} (Scala Matters Meetup, HiBob, 2023)\\
-  &\faYoutubePlay{} \href{https://www.youtube.com/watch?v=qBmZJwmd0CA}{Everything you (didn't) want to know about implicits (Hebrew)} (Unit Engineering, 2022)\\
-  &\faYoutubePlay{} \href{https://www.youtube.com/watch?v=N6ZJwnvTjLA}{Zero to FP (Hebrew)} (Underscore Meetup, 2018)\\
-  &\faYoutubePlay{} \href{https://www.youtube.com/watch?v=g1EvM4CbUvM}{Journey to Functional Programming} (Wix Engineering, 2017)\\
-\end{tabular}
+\section{Publications \& Talks}
+\begin{longtable}{@{}r p{0.8\textwidth}@{}}
+  \textsc{Writing:}& \href{https://monadical.com/posts/shades-of-rust-gui-library-list.html}{Emerging Rust GUI Libraries in a WASM World}, on the front page of Hacker News; \href{https://monadical.com/posts/typescript-validators-jamboree.html}{TypeScript Validators Jamboree}; \href{https://monadical.com/posts/property-based-testing-for-temporal-graph-storage.html}{Property-Based Testing for Temporal Graph Storage}; \href{https://monadical.com/posts/vibe-code-how-to-stay-in-control.html}{How to stay in control of your vibed codebase}\\[0.35em]
+  \textsc{Talks:}& Montr\'eal TypeScript and JavaScript meetup: Effect.ts, property-based testing with fast-check, and exhaustive matching with ts-pattern; internal talks on Quint, system architecture, and immutability\\
+\end{longtable}
 
-\endgroup
 \end{document}
